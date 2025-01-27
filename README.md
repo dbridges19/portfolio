@@ -1,3 +1,2 @@
 # portfolio
 
-# index.html
