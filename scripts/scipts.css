@@ -72,7 +72,7 @@
     display: block;
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     .topnav a:not(:first-child), .dropdown .dropbtn {
       display: none;
     }
@@ -82,7 +82,7 @@
     }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
@@ -184,3 +184,4 @@
     list-style-type: disc;
     margin-left: 20px;
 }
+
