@@ -119,7 +119,6 @@
       </div>
       <!-- Begin Skills Section -->
       <div id="Skills" class="tabcontent">
-         <h2>Skills</h2>
          <div class="skills-content">
             <h3>Technical Skills</h3>
             <p>
@@ -171,6 +170,8 @@
          <h3>This was a mock security port I turned in as a final for Systems Analysis and Design</h3>
          <iframe src="assests/Pete’s Pizza Security Report (1).pdf" width="80%" height="600px" style="border: none;"></iframe>
          <h2>Writing Example 2</h2>
+         <h3>This was a proposal paper done in Comp 2 on suggesting an incentive based reporting feature in more online games.</h3>
+         <iframe src="assests/Toxicity in Online Gaming.pdf" width="80%" height="600px" style="border: none;"></iframe>
       </div>
       <!-- Begin Web Examples -->
          <div id="WebProject" class="tabcontent">
@@ -182,66 +183,87 @@
       <!-- Begin Database Examples -->
       <div id="Database" class="tabcontent">
          <h2>Database Project 1</h2>
-         
-         
-
+         <p>This is a simple database diagram created for my Relational Database course at UALR. It represents an entity-relationship model for managing employees, vendors, inventory, customers, and sales.</p>
+         <img src="assests/Diagram.PNG" alt="Database Diagram for Relational Database Course" width="80%">
+     
          <h2>Database Project 2</h2>
-      </div>
+         <p>As part of my final project for my Social Computing class, I worked with a large dataset by setting up a Proxmox virtual environment at home to create a database. I collected post titles, upvotes, and comments from the /r/HuntShowdown subreddit and performed sentiment analysis using VADER and ChatGPT on a week's worth of data. Currently, I have data dating back to the beginning of the subreddit, and I plan to expand this research into my capstone project by analyzing sentiment trends over time.</p>
+     </div>
+     
       <!-- Begin Programming Examples -->
       <div id="Programming" class="tabcontent">
          <h2>Programming Project 1</h2>
          <iframe width="650px" height="400px"srcdoc='<!DOCTYPE html>
-            <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-             <head>
-               <meta charset="UTF-8">
-               <meta name="description" content="JavaScript Calculator">
-               <meta name="keywords" content="JavaScript, HTML, CSS">
-               <meta name="author" content="Bruce Bauer">
-               <title>JavaScript Calculator</title>
-               <link rel="stylesheet" type="text/css" href="scripts/minmaxavg.css">
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Calculator</title>
+                <link rel="stylesheet" type="text/css" href="scripts/minmaxavg.css">
+                <style>
+                    
+                </style>
             </head>
             <body>
-               <form id="myform">
-                  <div class="formcontainer" onsubmit="return false">
-                     <h1>Minimum, Maximum, and Average</h1>
-                     <fieldset id="detail">
-                        <legend>Min Max Avg</legend>
-                        <br>
-                        <label class="formlabel" for="Operand1">Operand 1: </label>
-                        <input type="text" id="Operand1" name="Operand1" size="15" maxlength="15">
-                        <label class="error" for="Operand1" id="Operand1Error"></label>
-                        <br><br>
-                        <label class="formlabel" for="Operand2">Operand 2: </label>
-                        <input type="text" id="Operand2" name="Operand2" size="15" maxlength="15">
-                        <label class="error" for="Operand2" id="Operand2Error"></label>
-                        <br><br>
-                        <label class="formlabel" for="Operand3">Operand 3: </label>
-                        <input type="text" id="Operand3" name="Operand3" size="15" maxlength="15">
-                        <label class="error" for="Operand3" id="Operand3Error"></label>
-                        <br><br>
-                        <label class="formlabel">Operator: </label>
-                        <label for="MinOperator"><input type="radio" name="Operator" id="MinOperator" value="Min">Min</label>
-                        <label for="MaxOperator"><input type="radio" name="Operator" id="MaxOperator" value="Max">Max</label>
-                        <label for="AvgOperator"><input type="radio" name="Operator" id="AvgOperator" value="Avg">Avg</label>
-                        <label for="Operator" class="error" id="OperatorError"></label>
-                        <br><br>
-                        <label class="formlabel">Result: </label>
-                        <span id="Result"></span>
-                        <br><br>
-                        <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
-                        <input type="button" value="Clear" name="Clear" onclick="clearform();">
-                     </fieldset>
-                  </div>
-               </form>
-               <script src="scripts/minmaxavg.js"></script>
+                <div class="formcontainer">
+                    <h1>Calculator</h1>
+                    <input type="text" class="display" id="display" disabled>
+                    <div class="buttons">
+                        <button onclick="clearDisplay()" class="clear">C</button>
+                        <button onclick="appendToDisplay(this.innerText)">/</button>
+                        <button onclick="appendToDisplay(this.innerText)">*</button>
+                        <button onclick="appendToDisplay(this.innerText)">-</button>
+                        <button onclick="appendToDisplay(this.innerText)">7</button>
+                        <button onclick="appendToDisplay(this.innerText)">8</button>
+                        <button onclick="appendToDisplay(this.innerText)">9</button>
+                        <button onclick="appendToDisplay(this.innerText)">+</button>
+                        <button onclick="appendToDisplay(this.innerText)">4</button>
+                        <button onclick="appendToDisplay(this.innerText)">5</button>
+                        <button onclick="appendToDisplay(this.innerText)">6</button>
+                        <button onclick="appendToDisplay(this.innerText)">0</button>
+                        
+                        <button onclick="appendToDisplay(this.innerText)">1</button>
+                        <button onclick="appendToDisplay(this.innerText)">2</button>
+                        <button onclick="appendToDisplay(this.innerText)">3</button>
+                     
+                        
+                        <button onclick="calculate()" class="equal">=</button>
+                        <button onclick="appendToDisplay(this.innerText)">.</button>
+                    </div>
+                </div>
+                <script>
+                    function appendToDisplay(value) {
+                        document.getElementById("display").value += value;
+                    }
+                    function clearDisplay() {
+                        document.getElementById("display").value = "";
+                    }
+                    function calculate() {
+                        try {
+                            document.getElementById("display").value = eval(document.getElementById("display").value);
+                        } catch (e) {
+                            alert("Invalid Expression");
+                        }
+                    }
+                </script>
             </body>
-            </html>' width="800px" height="500px" style="border: none;"></iframe>
-         <h2>Programming Project 2</h2>
+            </html>
+            
+            </html>
+            ' width="800px" height="500px" style="border: none;"></iframe>
+            <h2>Programming Project 2: JumpNShootMan</h2>
+               <p>For my final project in my Associate’s Degree, I worked with a teammate, Justin Bryant, to develop a full level of a game in Java. With around three months and only prior experience in Minecraft, we set out to create a Mega Man-inspired platformer. There's even an unfinished hidden level 2 that never got completed. I vividly remember spending countless hours making sure the health packs worked correctly. This experience was invaluable, teaching me a lot about game development and the importance of teamwork. None of this would have been possible without Justin’s collaboration.</p>
+               <img src="assests/JumpNShootMan.png" alt="JumpNShootMan Screenshot" width="80%">
+               <p><a href="https://www.mediafire.com/file/1wfiw0qzpw6cplx/Jump_Shoot_Man.zip/file" download>Download JumpNShootMan</a></p>
+               <p>Instructions: Download the zip, I think it's java sdk 17 but I can't remember. I think it will tell you when you try to run it but then just open the JumpShootMan.jar</p>
       </div>
       <!-- Begin Soft Skills -->
       <div id="SoftSkills" class="tabcontent">
-         <h2>Soft Skills Project 1</h2>
-         <h2>Soft Skills Project 2</h2>
+         <h2>Soft Skills</h2>
+         <p>Strong communication and customer service skills, ensuring seamless interactions with users and stakeholders.</p>
+         <p>Adaptability in high-pressure environments, quickly responding to evolving IT needs and troubleshooting complex issues.</p>
+         <p>Effective problem-solving and critical thinking, enabling efficient issue resolution and workflow optimization.</p>
+         <p>Proven ability to collaborate across teams and departments, streamlining processes for better productivity.</p>
       </div>
       <!-- Begin Capstone Project -->
       <div id="Capstone" class="tabcontent">

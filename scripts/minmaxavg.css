@@ -1,11 +1,11 @@
 .formcontainer {
-    width: 600px;
+    width: 500px;
     padding: 5px;
 }
 
 .formlabel {
     display: inline-block;
-    width: 100px;
+    width: 80px;
     text-align: right;
     padding: 5px;
 }
@@ -18,4 +18,42 @@ h1 {
     border-bottom: 3px solid #cc9900;
     color: #996600;
     font-size: 30px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    padding: 10px;
+}
+.display {
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    font-size: 1.5em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+button {
+    font-size: 1.2em;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    background: #f0f0f0;
+    border-radius: 5px;
+    width: 100%;
+}
+button:active {
+    background: #ccc;
+}
+.equal {
+    grid-column: span 2;
+    background: #28a745;
+    color: white;
+}
+.clear {
+    background: #dc3545;
+    color: white;
 }
