@@ -184,4 +184,25 @@
     list-style-type: disc;
     margin-left: 20px;
 }
+.work-examples-container {
+  max-width: 1600px; /* Larger container for bigger columns */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
+.work-example {
+  /* Instead of 50% each, reduce or remove the leftover space from the calc */
+  flex: 1 1 calc(45% - 20px); 
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.work-example iframe {
+  width: 100%;
+  height: 900px; /* Increase for more height */
+  border: none;
+}
