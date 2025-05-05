@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/web1/assets/styles/currencyconverter.css"> 
+    <script src="/web1/assets/styles/jquery-3.6.0.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"></script>
+    <script src="/web1/assets/styles/script.js"></script>
+</head>
+<body>
+    <div id ="dacurrency">
+    <form id="currency-form">
+        <label for="base-currency">Base Currency:</label>
+        <select id="base-currency" required="">
+            <option value="">Select an Option...</option>
+            <option value="USD">US Dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="GBP">Great Britain Pound</option>
+            <option value="CAD">Canadian Dollar</option>
+            <option value="DKK">Danish Kroner</option>
+        </select><br>
+        <label for="convert-currency">Convert to Currency:</label>
+        <select id="convert-currency" required="">
+            <option value="">Select an Option...</option>
+            <option value="USD">US Dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="GBP">Great Britain Pound</option>
+            <option value="CAD">Canadian Dollar</option>
+            <option value="DKK">Danish Kroner</option>
+        </select><br>
+        <label for="from-date">From Date:</label>
+        <input type="date" id="from-date" required=""><br>
+        <label for="to-date">To Date:</label>
+        <input type="date" id="to-date" required=""><br>
+        <div id="button-container">
+            <button type="button" id="show-results">Show Results</button>
+            <button type="button" id="clear">Clear</button>
+        </div>
+    </form>
+</div>
+    <div id="error-messages" style="color: red;"></div>
+    <div id="chart-container">
+        <canvas id="chartjs-0" width="800" height="400"></canvas>
+    </div>
+    
+</body></html>

@@ -1,0 +1,26 @@
+/* align*/
+#currency-form label{
+    display:inline-block;   
+    width:160px;            
+    font-weight:bold;       
+    text-align:right;       
+    margin:8px 10px 0 0;    
+}
+
+#currency-form select,
+#currency-form input[type="date"]{
+    width:220px;            
+    margin:6px 0;           
+    box-sizing:border-box;  
+}
+
+
+#button-container{
+    margin-left:170px;      
+}
+
+/* errors*/
+.error{                     
+    color:#c00;             
+    margin-left:12px;       
+}
